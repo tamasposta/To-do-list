@@ -26,7 +26,7 @@ The To-Do List App is a task management application built with Vanilla JavaScrip
    git clone https://github.com/yourusername/todo-list-app.git
 
 2. Navigate to the project directory
-  ``bash
+  ```bash
   cd todo-list-app
 
 3. Open the index.html file in your browser
@@ -54,11 +54,11 @@ Tasks can be edited or deleted, and the list can be filtered by priority.
 Contributions are welcome! Please fork this repository and create a pull request with your changes.
 
 ## Fork the repository
-Create your feature branch (git checkout -b feature/YourFeature)
-Commit your changes (git commit -m 'Add some feature')
-Push to the branch (git push origin feature/YourFeature)
-Open a pull request
+- Create your feature branch (git checkout -b feature/YourFeature)
+- Commit your changes (git commit -m 'Add some feature')
+- Push to the branch (git push origin feature/YourFeature)
+- Open a pull request
 
 ## Acknowledgements
-MDN Web Docs for providing detailed documentation and examples for JavaScript, HTML, and CSS.
-GitHub for hosting this project.
+- MDN Web Docs for providing detailed documentation and examples for JavaScript, HTML, and CSS.
+- GitHub for hosting this project.
