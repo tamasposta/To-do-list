@@ -17,7 +17,6 @@ The To-Do List App is a task management application built with Vanilla JavaScrip
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
-- [Screenshots](#screenshots)
 
 ## Installation
 
