@@ -1,6 +1,6 @@
 # To-Do List App
 
-![To-Do List App](https://img.shields.io/badge/To-Do%20List%20App-vanilla%20js-blue.svg)
+![To-Do List App](https://img.shields.io/badge/App-vanilla%20js-blue.svg)
 ![HTML](https://img.shields.io/badge/Built%20with-HTML-orange.svg)
 ![CSS](https://img.shields.io/badge/Styled%20with-CSS-pink.svg)
 ![Vanilla JS](https://img.shields.io/badge/Language-JavaScript-yellow.svg)
