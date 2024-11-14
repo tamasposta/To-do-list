@@ -24,10 +24,12 @@ The To-Do List App is a task management application built with Vanilla JavaScrip
 1. Clone the repository
    ```bash
    git clone https://github.com/yourusername/todo-list-app.git
+   ```
 
 2. Navigate to the project directory
   ```bash
   cd todo-list-app
+   ```
 
 3. Open the index.html file in your browser
 
