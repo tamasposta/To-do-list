@@ -47,7 +47,6 @@ let draggedItem = null;
 
 function handleDragStart(event) {
   draggedItem = this;
-  //   setTimeout(() => (this.style.opacity = "0.5"), 0); // Csökkentjük az átlátszóságot a húzás vizuális hatásához
 }
 
 function handleDragOver(event) {
@@ -56,7 +55,6 @@ function handleDragOver(event) {
 
 function handleDrop(event) {
   event.preventDefault();
-  //   this.style.opacity = "1";
 
   if (draggedItem !== this) {
     listContainer.insertBefore(draggedItem, this);
@@ -66,7 +64,6 @@ function handleDrop(event) {
 
 document.addEventListener("dragend", function () {
   if (draggedItem) {
-    // draggedItem.style.opacity = "1";
     draggedItem = null;
   }
 });
