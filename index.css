@@ -1,16 +1,16 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     color: rgb(75, 75, 75);
 }
 
 #main-container {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-height:100vh;
+    min-height: 100vh;
     min-height: 100svh;
     background-image: url("./Images/Tasks.jpg");
     background-position: center;
@@ -31,13 +31,13 @@
         padding: 0 10px;
     }
     #sub-container {
-        padding:10px;
+        padding: 10px;
     }
 
 }
 
 #title-container {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -49,14 +49,14 @@
 #to-do-form {
     display: flex;
     justify-content: space-between;
-    gap:5px
+    gap: 5px
 }
 
 #to-do-add {
-    width:60%;
-    padding:10px;
+    width: 60%;
+    padding: 10px;
     flex:1;
-    border-radius:5px;
+    border-radius: 5px;
     border: 2px solid rgb(218, 218, 218)
 }
 
@@ -66,17 +66,17 @@
     }
 
     #to-do-add {
-        width:100%
+        width: 100%
     }
 
     #form-inner {
-        display:flex;
+        display: flex;
         flex-flow: row nowrap;
-        gap:5px
+        gap: 5px
     }
 
     #priority, #add-btn {
-        width:50%
+        width: 50%
     }
 }
 
@@ -84,8 +84,8 @@
     cursor: pointer;
     background: rgb(255, 223, 116);
     border-radius: 5px;
-    padding:10px 30px;
-    border:none;
+    padding: 10px 30px;
+    border: none;
     color: rgb(75, 75, 75);
 
     &:hover {
@@ -94,17 +94,17 @@
 }
 
 #priority {
-    border-radius:5px;
+    border-radius: 5px;
     border: 2px solid rgb(218, 218, 218);
     background: rgb(251, 249, 241);
-    padding:10px;
+    padding: 10px;
 }
 
 #filter, #sort {
-    display:flex;
+    display: flex;
     flex-flow: row nowrap;
-    gap:10px;
-    font-size:14px;
+    gap: 10px;
+    font-size: 14px;
 }
 
 .priority-selector {
@@ -116,17 +116,17 @@
     font-weight: 300;
     
     &:last-child {
-        color:rgb(180, 188, 75);
+        color: rgb(180, 188, 75);
         border-color: rgb(180, 188, 75);
     };
 
     &:nth-last-child(2) {
-        color:rgb(159, 128, 41);
+        color: rgb(159, 128, 41);
         border-color: rgb(159, 128, 41);
     };
 
     &:nth-last-child(3) {
-        color:rgb(129, 64, 42);
+        color: rgb(129, 64, 42);
         border-color: rgb(129, 64, 42);
     };
     
@@ -143,7 +143,7 @@
 
 .priority-selector.active {
     font-weight: 500;
-    border-width:2px;
+    border-width: 2px;
   }
 
 
@@ -156,15 +156,15 @@
 }
 
 #list-container li::before {
-    content:"";
+    content: "";
     position: absolute;
     height: 28px;
     width: 28px;
     background-image: url("./Images/empty-circle.svg");
     background-size: cover;
     background-position: center;
-    top:12px;
-    left:8px;
+    top: 12px;
+    left: 8px;
 }
 
 #list-container li.checked {
@@ -179,41 +179,41 @@
 #list-container li span {
     position: absolute;
     right: 0;
-    top:5px;
+    top: 5px;
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color:#555;
+    color: #555;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
 
 .priority-badge {
-    margin-right:80px;
-    padding:3px!important;
-    color: #928c1d!important;
-    padding-left: 5px!important;
-    font-size:10px!important;
-    border-radius:0px!important;
-    height:40px!important;
+    margin-right: 80px;
+    padding: 3px !important;
+    color: #928c1d !important;
+    padding-left: 5px !important;
+    font-size: 10px !important;
+    border-radius: 0px !important;
+    height: 40px !important;
 
     &:hover {
-        background: none!important;
+        background: none !important;
     }
   }
 
   .edit-icon, .delete-icon {
     cursor: pointer;
     margin-left: 10px;
-    font-size: 1em!important;
+    font-size: 1em !important;
   }
 
   .edit-input {
     margin-right: 40px;
-    width:100%;
-    padding:5px;
-    border-radius:5px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
     border: 2px solid rgb(218, 218, 218)
   }
 

@@ -21,12 +21,13 @@ function addTask(event) {
 
     let prioritySpan = document.createElement("span");
     prioritySpan.classList.add("priority-badge");
-    prioritySpan.innerHTML = ` (${priority.value})`;
+    prioritySpan.innerHTML = `(${priority.value})`;
     li.appendChild(prioritySpan);
 
     let editIcon = document.createElement("span");
     editIcon.innerHTML = "✏️";
     editIcon.classList.add("edit-icon");
+
     editIcon.onclick = () => editTask(li, prioritySpan, editIcon, deleteIcon);
     li.appendChild(editIcon);
 
@@ -58,11 +59,12 @@ function handleDrop(event) {
 
   if (draggedItem !== this) {
     listContainer.insertBefore(draggedItem, this);
+    // insertAfter?
   }
   draggedItem = null;
 }
 
-document.addEventListener("dragend", function () {
+document.addEventListener("dragend", () => {
   if (draggedItem) {
     draggedItem = null;
   }
@@ -105,15 +107,15 @@ function editTask(li, prioritySpan, editIcon, deleteIcon) {
     saveTask(li, editInput, prioritySpan, editIcon, deleteIcon)
   );
 
-  editInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
+  editInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
       saveTask(li, editInput, prioritySpan, editIcon, deleteIcon);
     }
   });
 }
 
 function saveTask(li, editInput, prioritySpan, editIcon, deleteIcon) {
-  li.innerHTML = editInput.value; // Új szöveg mentése
+  li.innerHTML = editInput.value;
 
   li.appendChild(prioritySpan);
   li.appendChild(editIcon);
