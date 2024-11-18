@@ -35,14 +35,15 @@ The To-Do List App is a task management application built with Vanilla JavaScrip
 
 ## Usage
 Open the index.html file in your browser.
-Add tasks to your to-do list, set priorities, and manage them.
+Add tasks to your to-do list, set priorities, set deadlines and manage them.
 Tasks can be edited or deleted, and the list can be filtered by priority.
 
 ## Features
 - Add, edit, and delete tasks
 - Set task priority (Low, Medium, High)
+- Set deadlines
 - Filter tasks by priority
-- Sort tasks alphabetically or by priority
+- Sort tasks alphabetically, by priority or by deadline
 - Drag and drop tasks to reorder
 - Data persists using localStorage
 
