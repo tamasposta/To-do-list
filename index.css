@@ -48,36 +48,51 @@
 
 #to-do-form {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 5px
 }
 
 #to-do-add {
-    width: 60%;
     padding: 10px;
     flex:1;
     border-radius: 5px;
     border: 2px solid rgb(218, 218, 218)
 }
 
-@media(max-width:768px){
-    #to-do-form {
-        flex-direction: column;
-    }
+#form-inner {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px
+}
 
+#priority, #add-btn, #date-input {
+    width: 33%
+}
+
+@media(max-width:768px){
     #to-do-add {
         width: 100%
     }
 
-    #form-inner {
-        display: flex;
-        flex-flow: row nowrap;
-        gap: 5px
+    #priority, #date-input {
+        width: 40%
     }
 
-    #priority, #add-btn {
-        width: 50%
+    #add-btn {
+        width: 20%;
+        padding: 10px !important
     }
+}
+
+
+#date-input {
+    border: 2px solid rgb(218, 218, 218);
+    border-radius: 5px;
+    color: rgb(155, 155, 155);
+    padding: 5px;
+    height: 44px;
+    cursor: pointer;
 }
 
 #add-btn {
@@ -219,4 +234,16 @@
 
   .edit-icon {
     padding-right: 60px;
+  }
+
+  .date-p {
+    margin-right: 60px;
+    font-size: 11px;
+    color:rgb(175, 86, 56)  
+  }
+
+  @media(max-width:768px) {
+    .date-p {
+        font-size: 8px;
+    }
   }

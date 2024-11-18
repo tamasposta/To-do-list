@@ -2,6 +2,7 @@ const toDoAdd = document.getElementById("to-do-add");
 const priority = document.getElementById("priority");
 const listContainer = document.getElementById("list-container");
 const toDoForm = document.getElementById("to-do-form");
+const dateInput = document.getElementById("date-input");
 
 toDoForm.addEventListener("submit", addTask);
 
@@ -19,6 +20,11 @@ function addTask(event) {
     li.addEventListener("dragover", handleDragOver);
     li.addEventListener("drop", handleDrop);
     li.addEventListener("dragend", handleDragEnd);
+
+    let dateP = document.createElement("p");
+    dateP.classList.add("date-p");
+    dateP.innerHTML = `Deadline: ${dateInput.value}`;
+    li.appendChild(dateP);
 
     let prioritySpan = document.createElement("span");
     prioritySpan.classList.add("priority-badge");
@@ -182,6 +188,14 @@ function sortTasks(criteria) {
         .innerText.replace(/[()]/g, "")
         .trim();
       return priorityOrder[aPriority] - priorityOrder[bPriority];
+    } else if (criteria === "Date") {
+      const aDate = new Date(
+        a.querySelector(".date-p").innerText.replace("Deadline: ", "").trim()
+      );
+      const bDate = new Date(
+        b.querySelector(".date-p").innerText.replace("Deadline: ", "").trim()
+      );
+      return aDate - bDate;
     }
   });
 

@@ -19,10 +19,13 @@
           <h1>To-do-list</h1>
           <img id="list-img" src="Images/list.svg" alt="list" />
         </div>
-        <p>Add your tasks here and select which priority they are</p>
+        <p>
+          Add your tasks here, set a deadline and select which priority they are
+        </p>
         <form action="" id="to-do-form">
           <input type="text" id="to-do-add" placeholder="Add your task here" />
           <div id="form-inner">
+            <input type="date" id="date-input" />
             <select name="priority" id="priority">
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
@@ -42,6 +45,7 @@
           <p>Sort by:</p>
           <p class="sort-option">Name(A-Z)</p>
           <p class="sort-option">Priority</p>
+          <p class="sort-option">Date</p>
         </div>
         <ul id="list-container"></ul>
       </div>
