@@ -18,6 +18,7 @@ function addTask(event) {
     li.addEventListener("dragstart", handleDragStart);
     li.addEventListener("dragover", handleDragOver);
     li.addEventListener("drop", handleDrop);
+    li.addEventListener("dragend", handleDragEnd);
 
     let prioritySpan = document.createElement("span");
     prioritySpan.classList.add("priority-badge");
@@ -48,6 +49,7 @@ let draggedItem = null;
 
 function handleDragStart(event) {
   draggedItem = this;
+  setTimeout(() => (this.style.opacity = "0.5"), 0);
 }
 
 function handleDragOver(event) {
@@ -56,19 +58,29 @@ function handleDragOver(event) {
 
 function handleDrop(event) {
   event.preventDefault();
+  this.style.opacity = "1";
 
   if (draggedItem !== this) {
-    listContainer.insertBefore(draggedItem, this);
-    // insertAfter?
+    const dropPosition =
+      event.clientY - this.getBoundingClientRect().top > this.offsetHeight / 2
+        ? this.nextSibling
+        : this;
+
+    listContainer.insertBefore(draggedItem, dropPosition);
   }
-  draggedItem = null;
+  resetDragStyles();
 }
 
-document.addEventListener("dragend", () => {
+function handleDragEnd(event) {
+  resetDragStyles();
+}
+
+function resetDragStyles() {
   if (draggedItem) {
+    draggedItem.style.opacity = "1";
     draggedItem = null;
   }
-});
+}
 
 listContainer.addEventListener(
   "click",

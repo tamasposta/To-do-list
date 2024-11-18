@@ -151,7 +151,7 @@
     list-style: none;
     padding: 12px 120px 12px 50px;
     user-select: none;
-    cursor: pointer;
+    cursor: grab;
     position: relative;
 }
 
